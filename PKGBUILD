@@ -4,7 +4,7 @@ pkgdesc="ROS - effort_controllers."
 url='https://github.com/ros-controls/ros_controllers/wiki'
 
 pkgname='ros-melodic-effort-controllers'
-pkgver='0.17.0'
+pkgver='0.17.1'
 _pkgver_patch=1
 arch=('i686' 'x86_64' 'aarch64' 'armv7h' 'armv6h')
 pkgrel=1
@@ -37,9 +37,9 @@ depends=(${ros_depends[@]})
 # sha256sums=('SKIP')
 
 # Tarball version (faster download)
-_dir="ros_controllers-release-release-melodic-effort_controllers-${pkgver}-${_pkgver_patch}"
-source=("${pkgname}-${pkgver}-${_pkgver_patch}.tar.gz"::"https://github.com/ros-gbp/ros_controllers-release/archive/release/melodic/effort_controllers/${pkgver}-${_pkgver_patch}.tar.gz")
-sha256sums=('b7d33eecf773200de884f85cba7079e726966b5b8d8f094a60602f76cca1d203')
+_dir="ros_controllers-${pkgver}/effort_controllers"
+source=("${pkgname}-${pkgver}.tar.gz"::"https://github.com/ros-controls/ros_controllers/archive/${pkgver}.tar.gz")
+sha256sums=('373e5b00522a7e0343fa6b7ffe95ccf7fe6bd44622fe28534a05e2abcd8dc6ba')
 
 build() {
   # Use ROS environment variables
